@@ -1,0 +1,57 @@
+/* File: style.css */
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-container {
+    position: absolute;
+    top: -200px; /* Mulai dari luar layar */
+    animation: zigzag 3s ease-in-out forwards; /* Tambahkan animasi zigzag */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px; /* Beri spasi antar kontainer */
+}
+
+.image-container img {
+    max-width: 100px;
+    height: auto;
+}
+
+.image-container .description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+/* Animasi zigzag */
+@keyframes zigzag {
+    0% {
+        top: -200px;
+    }
+    25% {
+        top: 25%;
+        transform: translateX(-20px);
+    }
+    50% {
+        top: 50%;
+        transform: translateX(20px);
+    }
+    75% {
+        top: 75%;
+        transform: translateX(-20px);
+    }
+    100% {
+        top: 100%;
+        transform: translateX(0);
+    }
+}
